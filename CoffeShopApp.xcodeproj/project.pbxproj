@@ -13,6 +13,10 @@
 		CE86E1872C57DEFE006BD415 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE86E1862C57DEFE006BD415 /* Preview Assets.xcassets */; };
 		CE86E18F2C57E1F5006BD415 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E18E2C57E1F5006BD415 /* Color+Extension.swift */; };
 		CE86E1912C57E331006BD415 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E1902C57E331006BD415 /* OnboardingView.swift */; };
+		CE86E1942C57ED4D006BD415 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E1932C57ED4D006BD415 /* FavoritesView.swift */; };
+		CE86E1962C57ED85006BD415 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E1952C57ED85006BD415 /* CartView.swift */; };
+		CE86E1982C57ED91006BD415 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E1972C57ED91006BD415 /* NotificationView.swift */; };
+		CE86E19A2C57F025006BD415 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E1992C57F025006BD415 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		CE86E1862C57DEFE006BD415 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE86E18E2C57E1F5006BD415 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		CE86E1902C57E331006BD415 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		CE86E1932C57ED4D006BD415 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		CE86E1952C57ED85006BD415 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		CE86E1972C57ED91006BD415 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		CE86E1992C57F025006BD415 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,10 @@
 			children = (
 				CE86E1902C57E331006BD415 /* OnboardingView.swift */,
 				CE86E1812C57DEFC006BD415 /* MainMenu.swift */,
+				CE86E1932C57ED4D006BD415 /* FavoritesView.swift */,
+				CE86E1952C57ED85006BD415 /* CartView.swift */,
+				CE86E1972C57ED91006BD415 /* NotificationView.swift */,
+				CE86E1992C57F025006BD415 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,10 +171,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE86E1962C57ED85006BD415 /* CartView.swift in Sources */,
 				CE86E1822C57DEFC006BD415 /* MainMenu.swift in Sources */,
+				CE86E19A2C57F025006BD415 /* ContentView.swift in Sources */,
+				CE86E1982C57ED91006BD415 /* NotificationView.swift in Sources */,
 				CE86E1912C57E331006BD415 /* OnboardingView.swift in Sources */,
 				CE86E18F2C57E1F5006BD415 /* Color+Extension.swift in Sources */,
 				CE86E1802C57DEFC006BD415 /* CoffeShopAppApp.swift in Sources */,
+				CE86E1942C57ED4D006BD415 /* FavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

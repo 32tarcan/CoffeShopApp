@@ -50,7 +50,7 @@ struct OnboardingView: View {
             .offset(y: 510)
             
             .fullScreenCover(isPresented: $navigateToMainView) {
-                MainMenu()
+                ContentView()
             }
         }
         
