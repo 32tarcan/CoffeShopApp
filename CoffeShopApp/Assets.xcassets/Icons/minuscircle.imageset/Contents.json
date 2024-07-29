@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Type=default, Library=minuscircle.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
