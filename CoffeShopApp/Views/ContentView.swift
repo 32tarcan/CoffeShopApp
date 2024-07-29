@@ -22,19 +22,19 @@ struct ContentView: View {
                 
                 FavoritesView()
                     .tabItem {
-                        Image(systemName: "magnifyingglass")
+                        Image(systemName: "heart")
                     }
                     .tag(1)
                 
                 CartView()
                     .tabItem {
-                        Image(systemName: "heart")
+                        Image(systemName: "cart")
                     }
                     .tag(2)
                 
                 NotificationView()
                     .tabItem {
-                        Image(systemName: "person")
+                        Image(systemName: "bell")
                     }
                     .tag(3)
             }

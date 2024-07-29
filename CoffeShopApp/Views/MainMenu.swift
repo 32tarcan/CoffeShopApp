@@ -125,7 +125,7 @@ struct CategoryView: View {
             .background(isSelected ? Color(hex: "C67C4E") : Color(hex: "EDEDED").opacity(0.3))
             .foregroundColor(isSelected ? .white : .black)
             .cornerRadius(10)
-            
+        
     }
 }
 
