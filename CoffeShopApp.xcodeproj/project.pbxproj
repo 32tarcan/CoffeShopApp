@@ -83,8 +83,8 @@
 		CE86E1922C57E337006BD415 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CE86E1812C57DEFC006BD415 /* MainMenu.swift */,
 				CE86E1902C57E331006BD415 /* OnboardingView.swift */,
+				CE86E1812C57DEFC006BD415 /* MainMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
