@@ -10,35 +10,37 @@ import SwiftUI
 struct MainMenu: View {
     
     @State private var selectedLocation = "Bilzen, Tanjungbalai"
+    @State private var selectedCategory: String = "All Coffee"
     @State private var showLocationPicker = false
     
     var locations = ["Bilzen, Tanjungbalai", "New York, USA", "Tokyo, Japan", "Sydney, Australia"]
+    var categories = ["All Coffee", "Macchiato", "Latte", "Americano"]
     
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading, spacing: 4) {
-                           Text("Location")
-                               .foregroundColor(.gray)
-                           
-                           Menu {
-                               ForEach(locations, id: \.self) { location in
-                                   Button(action: {
-                                       selectedLocation = location
-                                   }) {
-                                       Text(location)
-                                           .foregroundColor(Color(hex: "D8D8D8")) 
-                                   }
-                               }
-                           } label: {
-                               HStack {
-                                   Text(selectedLocation)
-                                       .bold()
-                                   Image(systemName: "chevron.down")
-                               }
-                               .foregroundColor(.black)
-                           }
-                       }
-                       .padding(.horizontal)
+                Text("Location")
+                    .foregroundColor(.gray)
+                
+                Menu {
+                    ForEach(locations, id: \.self) { location in
+                        Button(action: {
+                            selectedLocation = location
+                        }) {
+                            Text(location)
+                                .foregroundColor(Color(hex: "D8D8D8"))
+                        }
+                    }
+                } label: {
+                    HStack {
+                        Text(selectedLocation)
+                            .bold()
+                        Image(systemName: "chevron.down")
+                    }
+                    .foregroundColor(.black)
+                }
+            }
+            .padding(.horizontal)
             
             HStack {
                 HStack {
@@ -88,10 +90,12 @@ struct MainMenu: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    CategoryView(title: "All Coffee", isSelected: true)
-                    CategoryView(title: "Macchiato")
-                    CategoryView(title: "Latte")
-                    CategoryView(title: "Americano")
+                    ForEach(categories, id: \.self) { category in
+                        CategoryView(title: category, isSelected: category == selectedCategory)
+                            .onTapGesture {
+                                selectedCategory = category
+                            }
+                    }
                 }
                 .padding(.horizontal)
             }
@@ -99,9 +103,9 @@ struct MainMenu: View {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                     CoffeeCardView(name: "Caffe Mocha", price: "$4.53", imageName: "coffee-1", rating: 4.8, star: "star")
-                    CoffeeCardView(name: "Flat White", price: "$3.53", imageName: "coffee-2", rating: 4.8, star: "star")
-                    CoffeeCardView(name: "Caffe Mocha", price: "$4.53", imageName: "coffee-3", rating: 4.8, star: "star")
-                    CoffeeCardView(name: "Flat White", price: "$3.53", imageName: "coffee-4", rating: 4.8, star: "star")
+                    CoffeeCardView(name: "Flat White", price: "$3.15", imageName: "coffee-2", rating: 4.8, star: "star")
+                    CoffeeCardView(name: "Caffe Mocha", price: "$4.88", imageName: "coffee-3", rating: 4.8, star: "star")
+                    CoffeeCardView(name: "Flat White", price: "$3.09", imageName: "coffee-4", rating: 4.8, star: "star")
                 }
                 .padding()
             }
@@ -115,14 +119,13 @@ struct CategoryView: View {
     
     var body: some View {
         Text(title)
-            .padding()
-            .background(isSelected ? Color(hex: "C67C4E") : Color.clear)
+            .font(.subheadline)
+            .padding(.vertical, 10)
+            .padding(.horizontal, 22)
+            .background(isSelected ? Color(hex: "C67C4E") : Color(hex: "EDEDED").opacity(0.3))
             .foregroundColor(isSelected ? .white : .black)
             .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(isSelected ? Color(hex: "C67C4E") : Color.gray, lineWidth: 1)
-            )
+            
     }
 }
 
