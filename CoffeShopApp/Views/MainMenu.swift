@@ -136,40 +136,49 @@ struct CoffeeCardView: View {
     var rating: Double
     var star: String
     
+    @State private var detail = false
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(10)
-            HStack {
-                Text(name)
-                    .font(.headline)
+            VStack(alignment: .leading) {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
+                HStack {
+                    Text(name)
+                        .font(.headline)
+                    Spacer()
+                    Image("star")
+                    Text(String(format: "%.1f", rating))
+                        .padding(4)
+                }
+                Text(price)
+                    .font(.subheadline)
                 Spacer()
-                Image("star")
-                Text(String(format: "%.1f", rating))
-                    .padding(4)
-                
-            }
-            Text(price)
-                .font(.subheadline)
-            Spacer()
-            HStack {
-                Spacer()
-                Button(action: {}) {
-                    Image(systemName: "plus")
-                        .padding()
-                        .background(Color(hex: "C67C4E"))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                HStack {
+                    Spacer()
+                    NavigationLink(
+                        destination: DetailView(),
+                        isActive: $detail
+                    ) {
+                        EmptyView()
+                    }
+                    Button(action: {
+                        self.detail = true
+                    }) {
+                        Image(systemName: "plus")
+                            .padding()
+                            .background(Color(hex: "C67C4E"))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
                 }
             }
+            .padding()
+            .background(Color.white)
+            .cornerRadius(20)
+            .shadow(radius: 5)
         }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(20)
-        .shadow(radius: 5)
-    }
 }
 
 

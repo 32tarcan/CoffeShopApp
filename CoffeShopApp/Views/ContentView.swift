@@ -12,33 +12,35 @@ struct ContentView: View {
     @State private var selectedTab = 0
     
     var body: some View {
-        VStack {
-            TabView(selection: $selectedTab) {
-                MainMenu()
-                    .tabItem {
-                        Image(systemName: "house")
-                    }
-                    .tag(0)
-                
-                FavoritesView()
-                    .tabItem {
-                        Image(systemName: "heart")
-                    }
-                    .tag(1)
-                
-                CartView()
-                    .tabItem {
-                        Image(systemName: "cart")
-                    }
-                    .tag(2)
-                
-                NotificationView()
-                    .tabItem {
-                        Image(systemName: "bell")
-                    }
-                    .tag(3)
+        NavigationStack {
+            VStack {
+                TabView(selection: $selectedTab) {
+                    MainMenu()
+                        .tabItem {
+                            Image(systemName: "house")
+                        }
+                        .tag(0)
+                    
+                    FavoritesView()
+                        .tabItem {
+                            Image(systemName: "heart")
+                        }
+                        .tag(1)
+                    
+                    CartView()
+                        .tabItem {
+                            Image(systemName: "cart")
+                        }
+                        .tag(2)
+                    
+                    NotificationView()
+                        .tabItem {
+                            Image(systemName: "bell")
+                        }
+                        .tag(3)
+                }
+                .accentColor(Color(hex: "C67C4E"))
             }
-            .accentColor(Color(hex: "C67C4E"))
         }
     }
 }
