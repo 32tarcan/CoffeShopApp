@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE7105CA2C5931B4003FB169 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7105C92C5931B4003FB169 /* DetailView.swift */; };
 		CE85174C2C5ADDE400F14156 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85174B2C5ADDE400F14156 /* OrderView.swift */; };
+		CE85174E2C5AE8FB00F14156 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85174D2C5AE8FB00F14156 /* MapView.swift */; };
 		CE86E1802C57DEFC006BD415 /* CoffeShopAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E17F2C57DEFC006BD415 /* CoffeShopAppApp.swift */; };
 		CE86E1822C57DEFC006BD415 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E1812C57DEFC006BD415 /* MainMenu.swift */; };
 		CE86E1842C57DEFE006BD415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE86E1832C57DEFE006BD415 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		CE7105C92C5931B4003FB169 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CE85174B2C5ADDE400F14156 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		CE85174D2C5AE8FB00F14156 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CE86E17C2C57DEFC006BD415 /* CoffeShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE86E17F2C57DEFC006BD415 /* CoffeShopAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeShopAppApp.swift; sourceTree = "<group>"; };
 		CE86E1812C57DEFC006BD415 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				CE86E1972C57ED91006BD415 /* NotificationView.swift */,
 				CE7105C92C5931B4003FB169 /* DetailView.swift */,
 				CE85174B2C5ADDE400F14156 /* OrderView.swift */,
+				CE85174D2C5AE8FB00F14156 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				CE86E1962C57ED85006BD415 /* CartView.swift in Sources */,
 				CE7105CA2C5931B4003FB169 /* DetailView.swift in Sources */,
 				CE86E1822C57DEFC006BD415 /* MainMenu.swift in Sources */,
+				CE85174E2C5AE8FB00F14156 /* MapView.swift in Sources */,
 				CE86E19A2C57F025006BD415 /* ContentView.swift in Sources */,
 				CE86E1982C57ED91006BD415 /* NotificationView.swift in Sources */,
 				CE86E1912C57E331006BD415 /* OnboardingView.swift in Sources */,
