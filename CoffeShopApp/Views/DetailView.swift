@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    
+    @Environment(\.dismiss) var dismiss
     @State private var isViewed = false
     @State private var selectedSize: String? = "M"
     @State private var orderNav = false
@@ -125,6 +125,18 @@ struct DetailView: View {
                 Image("heart")
                     .foregroundColor(.black)
             }
+                .navigationBarBackButtonHidden(true)
+                        .toolbar {
+                            ToolbarItem(placement: .topBarLeading) {
+                                Button(action: {
+                                    dismiss()
+                                }) {
+                                    Label("Back", image: "back")
+                                        .frame(width: 44, height: 44)
+                                        
+                                }
+                            }
+                        }
     )}
 }
 
