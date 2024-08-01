@@ -32,7 +32,6 @@ struct DetailView: View {
                         .font(.subheadline)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
-                        .lineLimit(isViewed ? nil : 3)
                         .padding(.horizontal)
                     
                    
